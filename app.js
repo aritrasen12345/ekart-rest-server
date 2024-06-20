@@ -57,16 +57,16 @@ app.use((error, req, res, next) => {
 });
 
 // * Render.Com server auto run after 14 minutes
-cron.schedule("*/14 * * * *", () => {
-  axios
-    .get(process.env.BACKEND_BASE_URL)
-    .then((response) => {
-      console.log("Ping successful");
-    })
-    .catch((error) => {
-      console.error("Error pinging server:", error.message);
-    });
-});
+// cron.schedule("*/14 * * * *", () => {
+//   axios
+//     .get(process.env.BACKEND_BASE_URL)
+//     .then((response) => {
+//       console.log("Ping successful");
+//     })
+//     .catch((error) => {
+//       console.error("Error pinging server:", error.message);
+//     });
+// });
 
 // db
 const port = process.env.PORT || 8000;
